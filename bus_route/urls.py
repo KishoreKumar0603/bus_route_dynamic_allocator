@@ -1,7 +1,9 @@
+# bus_route/urls.py
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path
+from bus_tracker import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('bus_tracker.urls')),  # Include the bus_tracker app's URLs
+    path('', views.index, name='index'),  # Ensure this maps to your view
 ]
